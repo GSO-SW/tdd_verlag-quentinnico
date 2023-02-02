@@ -13,8 +13,21 @@ namespace Verlag
         string titel;
         int auflage;
 
+        ISBN isbn = new ISBN("978-000000000");
 
-       public string Autor
+        public string ISBN10
+        {
+            get { return isbn.ISBN10; }
+            set { isbn.ISBN10 = value; }
+        }
+        public string ISBN13
+        {
+            get { return isbn.ISBN13; }
+            set { isbn.ISBN13 = value; }
+        }
+
+
+        public string Autor
         {
             get { return autor; }
             set {

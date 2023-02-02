@@ -106,7 +106,8 @@ namespace VerlagTests
 			Buch b = new Buch(unerlaubtesZeichen, "titel");
 		}
 
-		public void ISBN13_Setzten()
+        [TestMethod]
+        public void ISBN13_Setzten()
 		{
 			string isbn13 = "978-3770436163";
 
@@ -114,12 +115,13 @@ namespace VerlagTests
             Buch b = new Buch("Test", "Test");
 			b.ISBN13 = isbn13;
 
-			Assert.AreEqual(isbn13,b.ISBN13)
+			Assert.AreEqual(isbn13, b.ISBN13);
         }
 
-		public void ISBN13_SetztPruefzifferWennNichtGegeben()
+        [TestMethod]
+        public void ISBN13_SetztPruefzifferWennNichtGegeben()
 		{
-            string isbn13 = "978-978-377043614";
+            string isbn13 = "978-377043614";
 			
 			Buch b = new Buch("Test", "Test");
 
@@ -129,7 +131,8 @@ namespace VerlagTests
 
         }
 
-		public void ISBN10_ErrechnetSichAusISBN13()
+        [TestMethod]
+        public void ISBN10_ErrechnetSichAusISBN13()
 		{
             string isbn13 = "978-3770436064";
             string isbn10 = "3770436067";
